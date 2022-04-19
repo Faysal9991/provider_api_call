@@ -1,9 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:providerapp/screens/fastpage.dart';
-
-import 'provider/dataprovider.dart';
+import 'package:providerapp/provider/apitestpro.dart';
+import 'package:providerapp/screens/home_page_screen.dart';
 
 
 void main() {
@@ -12,7 +11,7 @@ void main() {
     /// can use [MyApp] while mocking the providers
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => Data()),
+        ChangeNotifierProvider(create: (_) => HomepageProvider()),
       ],
       child: const MyApp(),
     ),
@@ -26,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return MaterialApp(
-     home: HomePage(),
+     home: Homepage(),
     );
   }
 }
